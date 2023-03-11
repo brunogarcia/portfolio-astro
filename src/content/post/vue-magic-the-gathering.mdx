@@ -3,16 +3,25 @@ template: BlogPost
 tags: ["experiment", "vuejs", "vuex", "vuetify"]
 path: /vue-magic-the-gathering
 publishDate: "2020-04-07T14:59:36.571Z"
-title: "Vue & Magic The Gathering"
+title: "App developed with Vue & Magic The Gathering"
 description: "A project made with Vue, Vuex, Vuetify and the API of Magic The Gathering"
 thumbnail: https://res.cloudinary.com/pastelitos/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1607785519/bruno/vue-magic_beohsn.png
 ---
 
-# Description
+import { Image } from "@astrojs/image/components";
+
+<Image
+	src="https://res.cloudinary.com/pastelitos/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1607785519/bruno/vue-magic_beohsn.png"
+	alt="Image of the app"
+	width={550}
+	height={460}
+/>
+
+## Description
 
 This app uses the API of Magic The Gathering to request a [list of cards](https://docs.magicthegathering.io/#api_v1cards_list).
 
-Features:
+## Features
 
 - Search by the card name
 - Filter the list of the cards by the card type
@@ -21,7 +30,7 @@ Features:
 - Display a random card
 - Save a favorite card
 
-# Tech
+## Tech
 
 Made with [Vue](https://vuejs.org/), [Vuex](https://vuex.vuejs.org/), [Vuetify](https://vuetifyjs.com/) and the [API of Magic The Gathering](https://docs.magicthegathering.io/).
 
@@ -35,11 +44,11 @@ The [Github Action](https://github.com/brunogarcia/vue-magic-the-gathering/blob/
 - Builds the project on production mode
 - Deploys the project in Netlify
 
-# See in action
+## See in action
 
 [https://vue-magic-the-gathering.netlify.app](https://vue-magic-the-gathering.netlify.app)
 
-# Github
+## Github
 
 Check out the source code on Github.
 
