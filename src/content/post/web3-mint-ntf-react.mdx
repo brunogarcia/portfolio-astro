@@ -1,0 +1,155 @@
+---
+tags: ["experiment", "reactjs", "ethereum", "nft", "solidity", "typescript"]
+publishDate: "2022-12-06T14:59:36.571Z"
+title: "App development for mint NFT on Ethereum"
+description: "Mint your own NFT collection and ship a Web3 app to show them off"
+---
+
+## Resume
+
+Programmatically generate your own NFT collection, write + deploy a smart contract in Solidity,
+and build your own React dApp to let friends connect their wallets and interact w/ your NFTs.
+
+## NFT on OpenSea
+
+[https://testnets.opensea.io/brunogarcia](https://testnets.opensea.io/brunogarcia)
+
+## Contracts
+
+[https://goerli.etherscan.io/address/0xd6d3ed2e79745fd0fadd7d3fcf2e6bb7b221670d](https://goerli.etherscan.io/address/0xd6d3ed2e79745fd0fadd7d3fcf2e6bb7b221670d)
+
+## Github
+
+Check out the source code on Github.
+
+- [React Ethereum NFT](https://github.com/brunogarcia/react-ethereum-nft)
+- [Smart Contracts](https://github.com/brunogarcia/smart-contracts-ethereum)
+
+## Glossary
+
+### Blockchain
+
+Think of it as a cloud provider, like AWS, but it's owned by no one.
+
+It's run by compute power from machines who want to support the network. Usually these people are called Nodes and they run client software to keep the network running while keeping our data or transactions stay on the network!
+
+### Smart contract
+
+> A Contract is an abstraction which represents a connection to a specific contract on the Ethereum Network, so that applications can use it like a normal JavaScript object.
+
+Similar to server's code with different functions people can hit.
+
+Remember, the blockchain has no owner. It's just a bunch of computers around the world run by miners that have a copy of the blockchain.
+
+When we deploy our smart contract, we need to tell all those miners, "hey, this is a new smart contract, please add my smart contract to the blockchain and then tell everyone else about it as well".
+
+### Wallet
+
+Similar to server's database, but it's on the blockchain.
+
+It's where we store our ETH and other tokens.
+
+We need something to connect our dapp with our wallet so we can securely pass our wallet credentials. Our dapp can use those credentials to call our smart contract. You need to have valid credentials to access functions on smart contracts.
+
+It's almost like authentication. We need something to "login" to the blockchain and then use those login credentials to make API requests from our dapp.
+
+### Transaction
+
+When we want to perform an action on the Ethereum blockchain we call it a transaction.
+
+For example:
+
+- Sending someone ETH is a transaction.
+- Doing something that updates a variable in our contract is also considered a transaction.
+- When we call our `wave` contract and perform `totalWaves += 1`, that's a transaction!
+- Deploying a smart contract is also a transaction.
+
+### QuickNode
+
+[QuickNode](https://www.quicknode.com/) essentially helps us broadcast our contract creation transaction so that it can be picked up by miners as quickly as possible.
+
+Once the transaction is mined, it is then broadcasted to the blockchain as a legit transaction. From there, everyone updates their copy of the blockchain.
+
+So, QuickNode gives us a simple way to deploy to the real Ethereum blockchain.
+
+### Testnets
+
+We should not deploy to the "Ethereum mainnet" until the very end.
+
+Why? Because it costs real money and it's not worth messing up!
+
+We're going to start with a "testnet" which is a clone of "mainnet" but it uses fake money so we can test stuff out as much as we want.
+
+But, it's important to know that testnets are run by actual miners and mimic real-world scenarios.
+So, we can test our application in a real-world scenario where we're actually going to:
+
+1. Broadcast our transaction.
+
+2. Wait for it to be picked up by actual miners.
+
+3. Wait for it to be mined.
+
+4. Wait for it to be broadcasted back to the blockchain telling all the other miners to update their copies.
+
+### Goerli
+
+There are a few testnets out there and the one I'll be using is called [Goerli](https://goerli.net/) which is run by the Ethereum foundation.
+
+In order to deploy to Goerli, I need fake ether.
+
+Why? Because if you were deploying to the actual Ethereum mainnet, you'd use real money! So, testnets copy how mainnet works, only difference is no real money is involved.
+
+### Goerli faucet
+
+In order to get fake ETH, we have to ask the network for some. This fake ETH will only work on this specific testnet. You can grab some fake ETH for [Goerli faucet](https://goerlifaucet.com/).
+
+Make sure that your [MetaMask wallet](https://metamask.io) is set to the "Goerli Test Network" before using faucet.
+
+### Goerli private key
+
+> Accessing your private key can be done by opening MetaMask, change the network to "Goerli Test Network" and then click the three dots and select "Account Details" > "Export Private Key"
+
+Why do you need to use your private key?
+
+Because in order to perform a transaction like deploying a contract, you need to "login" to the blockchain.
+
+And, your username is your public address and your password is your private key.
+It's kinda like logging into AWS or GCP to deploy.
+
+### ethers.js
+
+The ethers.js library aims to be a complete and compact library for interacting with the Ethereum Blockchain and its ecosystem.
+
+It was originally designed for use with ethers.io and has since expanded into a more general-purpose library.
+
+[https://docs.ethers.io/](https://docs.ethers.io/)
+
+### Provider
+
+It is what we use to actually talk to Ethereum nodes.
+It provides read-only access to the Blockchain and its status.
+
+Remember how we were using QuickNode to deploy?
+Well in this case we use nodes that Metamask provides in the background to send/receive data from our deployed contract.
+
+### Signers
+
+A Signer in ethers is an abstraction of an Ethereum Account, which can be used to sign messages and transactions and send signed transactions to the Ethereum Network to execute state changing operations.
+
+### Contract Application Binary Interface (ABI)
+
+When you compile your smart contract, the compiler spits out a bunch of files needed that lets you interact with the contract. You can find these files in the artifacts folder located in the root of your Solidity project.
+
+The ABI file is something our web app needs to know how to communicate with our contract.
+
+[https://docs.soliditylang.org/en/v0.8.17/abi-spec.html](https://docs.soliditylang.org/en/v0.8.17/abi-spec.html)
+
+### Gas and fees
+
+Gas is essential to the Ethereum network. It is the fuel that allows it to operate, in the same way that a car needs gasoline to run.
+
+Gas refers to the unit that measures the amount of computational effort required to execute specific operations on the Ethereum network.
+
+Since each Ethereum transaction requires computational resources to execute, each transaction requires a fee. Gas refers to the fee required to conduct a transaction on Ethereum successfully.
+
+[https://ethereum.org/en/developers/docs/gas/](https://ethereum.org/en/developers/docs/gas/)
