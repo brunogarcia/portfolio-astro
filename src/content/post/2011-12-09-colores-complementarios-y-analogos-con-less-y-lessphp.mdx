@@ -56,14 +56,25 @@ es necesario crear otra variable y asignarles los grados necesarios.
 El código generado es un CSS normal y corriente que cualquier navegador
 puede entender:
 
-> <style media='all' type='text/css'>
-  .example { color:white; }
-  .example.base { background-color:#0081d1; }
-  .example.analogousLeft { background-color:#1c00d1; }
-  .example.analogousRight { background-color:#00d184; }
-  .example.complementary { background-color:#d10000; }
-
+```html
+<style media="all" type="text/css">
+	.example {
+		color: white;
+	}
+	.example.base {
+		background-color: #0081d1;
+	}
+	.example.analogousLeft {
+		background-color: #1c00d1;
+	}
+	.example.analogousRight {
+		background-color: #00d184;
+	}
+	.example.complementary {
+		background-color: #d10000;
+	}
 </style>
+```
 
 Con esto ya podemos trabajar directamente, y con un poco de HTML mostrar
 esto:
