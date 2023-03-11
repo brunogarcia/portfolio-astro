@@ -6,6 +6,8 @@ description: "Disfruto mucho con cada The Mêlée que se organiza en Donostia."
 tags: ["css", "less"]
 ---
 
+import { Image } from "@astrojs/image/components";
+
 Disfruto mucho con cada [The Mêlée](https://themelee.org/) que se organiza en Donostia. Las charlas y talleres son una auténtica maravilla, y además es la oportunidad perfecta para conocer a gente del sector web con nuevas ideas y ganas de hacer las cosas bien.
 
 Quizás lo mejor de todo es que a muchos de nosotros nos sirve como un
@@ -79,7 +81,12 @@ puede entender:
 Con esto ya podemos trabajar directamente, y con un poco de HTML mostrar
 esto:
 
-![](https://res.cloudinary.com/pastelitos/image/upload/v1617298874/bruno/spin-colores_fzmyyp.png)
+<Image
+	src="https://res.cloudinary.com/pastelitos/image/upload/v1617298874/bruno/spin-colores_fzmyyp.png"
+	alt="Image of the app"
+	width={212}
+	height={152}
+/>
 
 Claro, después ves cosas como [Color Scheme
 Designer](https://colorschemedesigner.com/) y piensas: ¡menudo curro!.
