@@ -5,23 +5,21 @@ description: "The main goal of both projects is to research about the LangChain 
 tags: ["openai", "langchain", "react", "typescript"]
 ---
 
+import { Image } from "@astrojs/image/components";
+
 ## How is it working?
 
-On both cases, I'm using the **SQL Database Chain** of LangChain.
+- First, the [API of OpenAI](https://openai.com/blog/openai-api) allows me to use the [GPT-3](https://openai.com/blog/gpt-3-apps/) model at a very cheap price.
+  The total cost of the research was $0.36.
+- Then, the [LangChain](https://python.langchain.com/) library allows me to connect the OpenAI API and the Titanic Database in a very simple way.
+- Finally, [Next.js](https://nextjs.org/) let me create a simple web application that allows the final user to interact with the database in a natural language.
 
-Also I'm using [Next.js](https://nextjs.org/) to create a simple web application that allows me to interact with the database in a natural language way.
-
-## Github
-
-Check out the source code on Github.
-
-- [Titanic Jupiter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite)
-- [Titanic Next.js App](https://github.com/brunogarcia/nextjs-langchain-titanic-sqlite)
-
-## Tools
-
-- [OpenAI API](https://openai.com/blog/openai-api)
-- [Python LangChain](https://python.langchain.com/) and [Javascript LangChain](https://js.langchain.com/) libraries
+<Image
+	src="https://raw.githubusercontent.com/brunogarcia/nextjs-langchain-titanic-sqlite/main/how-is-it-work.png"
+	alt="How is it work?"
+	width={700}
+	aspectRatio={"3/4"}
+/>
 
 ## Database
 
@@ -71,3 +69,10 @@ The app and the notebook are able to answer the following questions in natural l
 There were 216 passengers in first class, 184 passengers in second class, and 491 passengers in
 third class.
 ```
+
+## Github
+
+Check out the source code on Github.
+
+- [Titanic Jupiter Notebook](https://github.com/brunogarcia/langchain-titanic-sqlite)
+- [Titanic Next.js App](https://github.com/brunogarcia/nextjs-langchain-titanic-sqlite)
