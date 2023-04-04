@@ -1,10 +1,10 @@
 const siteMeta = {
-	author: "Chris Williams",
-	title: "Astro Theme Cactus",
-	description: "An opinionated starter theme for Astro",
+	author: "Bruno Garcia",
+	title: "Bruno Garcia",
+	description: "Artículos sobre tecnologías web",
 	lang: "en-GB",
 	ogLocale: "en_GB",
-	githubUrl: "https://github.com/chrismwilliams/astro-theme-cactus",
+	githubUrl: "https://github.com/brunogarcia/portfolio-astro",
 	themeColorLight: "#fafafa",
 	themeColorDark: "#1d1f21",
 };
