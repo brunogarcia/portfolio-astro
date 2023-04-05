@@ -1,26 +1,21 @@
 ---
 publishDate: "2023-02-04T16:06:36.571Z"
 title: "Research about LangChain and the API of OpenAI"
-description: "The main goal of both projects is to research about the LangChain library and the API of OpenAI using the Titanic SQLite database."
+description: "The main goal of this project is to research about the LangChain library and the API of OpenAI using the Titanic SQLite database."
 tags: ["openai", "langchain", "react", "typescript"]
 ---
 
 import { Image } from "@astrojs/image/components";
+import howIsItWorkImage from "../../assets/nextjs-langchain-how-is-it-work.png";
 
 ## How is it working?
 
 - First, the [API of OpenAI](https://openai.com/blog/openai-api) allows me to use the [GPT-3](https://openai.com/blog/gpt-3-apps/) model at a very cheap price.
-  The total cost of the research was $0.36.
+  The total cost of the research was 💵 $0.36.
 - Then, the [LangChain](https://python.langchain.com/) library allows me to connect the OpenAI API and the Titanic Database in a very simple way.
 - Finally, [Next.js](https://nextjs.org/) let me create a simple web application that allows the final user to interact with the database in a natural language.
 
-<Image
-	src="https://raw.githubusercontent.com/brunogarcia/nextjs-langchain-titanic-sqlite/main/how-is-it-work.png"
-	alt="How is it work?"
-	width={750}
-	height={500}
-	aspectRatio={"16/9"}
-/>
+<Image src={howIsItWorkImage} alt="How is it work?" width={700} height={500} aspectRatio={"16/9"} />
 
 ## Database
 
